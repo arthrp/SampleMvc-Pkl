@@ -1,0 +1,9 @@
+Logging {
+    LogLevel {
+        Default = "Information"
+        ["Microsoft.AspNetCore"] = "Warning"
+    }
+}
+AllowedHosts: String = "*"
+hidden portNum: Int(this < 9999 && this > 5000) = 5701
+Url: String = "http://*:\(portNum)" 
