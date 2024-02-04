@@ -6,4 +6,4 @@ Logging {
 }
 AllowedHosts: String = "*"
 hidden portNum: Int(this < 9999 && this > 5000) = 5701
-Url: String = "http://*:\(portNum)" 
+Urls: String = "http://*:\(portNum)" 
