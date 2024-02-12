@@ -16,6 +16,12 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 8.0.x
+    - name: Setup Pkl
+      run: |
+        mkdir tools
+        curl -L -o pkl https://github.com/apple/pkl/releases/download/0.25.2/pkl-linux-amd64
+        mv pkl tools/
+        echo "$GITHUB_WORKSPACE/tools" >> $GITHUB_PATH
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
